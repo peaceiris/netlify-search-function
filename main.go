@@ -1,23 +1,18 @@
 package main
 
 import (
-	"fmt"
-
+	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-type MyEvent struct {
-	Name string `json:"What is your name?"`
-}
-
-type MyResponse struct {
-	Message string `json:"Answer:"`
-}
-
-func hello(event MyEvent) (MyResponse, error) {
-	return MyResponse{Message: fmt.Sprintf("Hello %s!!", event.Name)}, nil
+func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+	return &events.APIGatewayProxyResponse{
+		StatusCode: 200,
+		Body:       "Hello, World",
+	}, nil
 }
 
 func main() {
-	lambda.Start(hello)
+	// Make the handler available for Remote Procedure Call by AWS Lambda
+	lambda.Start(handler)
 }
