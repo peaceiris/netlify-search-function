@@ -1,4 +1,4 @@
-# netlify-function-live-search
+# Netlify Search Function
 
 
 ## References
