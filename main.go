@@ -8,7 +8,7 @@ import (
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	return events.APIGatewayProxyResponse{
 		StatusCode: 200,
-		Body:       "Hello Live Search with AWS Lambda and Netlify",
+		Body:       "Hello Live Search with AWS Lambda and Netlify" + events.queryStringParameters,
 	}, nil
 }
 
