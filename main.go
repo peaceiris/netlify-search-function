@@ -5,12 +5,12 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-var str = "Gopher"
+var msg = "Hello Gopher"
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	return &events.APIGatewayProxyResponse{
 		StatusCode: 200,
-		Body:       "Hello, World" + str,
+		Body:       msg,
 	}, nil
 }
 
