@@ -1,12 +1,12 @@
 # Netlify Search Function
 
 
-## Local testing
+<!-- ## Local testing
 
 ### Install SAM CLI
 
 ```sh
-conda create -n aws-sam-cli python=3.6 -y
+conda create -n aws-sam-cli python=2.7 -y
 conda activete aws-sam-cli
 pip install aws-sam-cli
 sam --version
@@ -16,7 +16,7 @@ sam --version
 
 ```sh
 pip install --upgrade aws-sam-cli
-```
+``` -->
 
 
 ## References
