@@ -18,7 +18,7 @@ type MyEvent struct {
 // 	}, nil
 // }
 
-func HandleRequest(ctx context.Context, ngame MyEvent) (string, error) {
+func HandleRequest(ctx context.Context, name MyEvent) (string, error) {
 	return fmt.Sprintf("Hello %s!", name.Name), nil
 }
 
