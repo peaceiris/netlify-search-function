@@ -5,10 +5,12 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	return events.APIGatewayProxyResponse{
+var msg = "Hello Gopher"
+
+func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+	return &events.APIGatewayProxyResponse{
 		StatusCode: 200,
-		Body:       "Hello Live Search with AWS Lambda and Netlify",
+		Body:       msg,
 	}, nil
 }
 

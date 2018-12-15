@@ -4,4 +4,4 @@
   publish = "public"
 [build.environment]
   # Change this path with the path to your repository
-  GO_IMPORT_PATH = "github.com/peaceiris/netlify-function-live-search"
+  GO_IMPORT_PATH = "github.com/peaceiris/netlify-search-function"
