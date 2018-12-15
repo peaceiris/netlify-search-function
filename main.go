@@ -5,10 +5,14 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+type MyEvent struct {
+	Name string `json:"name"`
+}
+
+func handler(request events.APIGatewayProxyRequest, name MyEvent) (events.APIGatewayProxyResponse, error) {
 	return events.APIGatewayProxyResponse{
 		StatusCode: 200,
-		Body:       "Hello Live Search with AWS Lambda and Netlify" + request[0],
+		Body:       "My name is " + name.Name,
 	}, nil
 }
 
